@@ -49,7 +49,7 @@ public class RollingDice {
 						scnr.nextLine();
 						System.out.println("That was not a number try again:");
 					}
-				}while (isInteger == false);
+					}while (isInteger == false);
 
 				Roll.notSixSidedDice(numOfSides);//METHOD TO ROLL THE DICE
 				System.out.println("Would you like to roll again?(y/n): ");
@@ -58,15 +58,16 @@ public class RollingDice {
 					System.out.println("Please type either a 'y' to continue or an 'n' to end.");
 					ans = scnr.nextLine();
 				}
-				//scnr.nextLine();
-				Roll.nameYourRoll(6);
-				System.out.println("Would you like to roll again?(y/n): ");
-				ans = scnr.nextLine();
-				while (Roll.isYesOrNo(ans) != true) {// IF THE USER TYPES ANYTHING BUY "Y" OR "N" IT WILL ASK THEM TO TRY AGAIN
-					System.out.println("Please type either a 'y' to continue or an 'n' to end.");
-					ans = scnr.nextLine();
-				}
 			}
+			//scnr.nextLine();
+			Roll.nameYourRoll(6);
+			System.out.println("Would you like to roll again?(y/n): ");
+			ans = scnr.nextLine();
+			while (Roll.isYesOrNo(ans) != true) {// IF THE USER TYPES ANYTHING BUY "Y" OR "N" IT WILL ASK THEM TO TRY AGAIN
+				System.out.println("Please type either a 'y' to continue or an 'n' to end.");
+				ans = scnr.nextLine();
+				}
+			
 		}
 		System.out.println("Goodbye!");
 		}
