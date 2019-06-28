@@ -33,6 +33,10 @@ public class RollingDice {
 		
 		System.out.println("Do your dice each have 6 sides?(y/n)");
 		sixSides = scnr.nextLine();
+		while (Roll.isYesOrNo(sixSides) != true) {// IF THE USER TYPES ANYTHING BUY "Y" OR "N" IT WILL ASK THEM TO TRY AGAIN
+			System.out.println("Please type either a 'y' to continue or an 'n' to end.");
+			ans = scnr.nextLine();
+		}
 		
 		while (ans.equalsIgnoreCase("y")){
 			if(sixSides.equalsIgnoreCase("n")) {
